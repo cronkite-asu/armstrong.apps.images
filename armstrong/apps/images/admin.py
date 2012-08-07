@@ -17,6 +17,8 @@ class ImageAdmin(admin.ModelAdmin):
         fieldsets.PUBLICATION,
         fieldsets.AUTHORS,
     )
+    
+    search_fields = ["id", "title", "slug", "summary"]
 
     def get_urls(self):
         urls = super(ImageAdmin, self).get_urls()
